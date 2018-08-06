@@ -4,3 +4,23 @@
     height: auto;
     margin: auto;
   }
+
+#main {
+  height: 100%;
+  background-color: lightgray;
+}
+
+#title {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+#img-caption {
+  text-align: center;
+}
+
+.textWrapper {
+  background-color: whitesmoke;
+  padding: 15px;
+  margin: 15px 15px 0px 15px;
+}
