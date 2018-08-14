@@ -13,29 +13,56 @@
     <div class="formWrapper">
         <fieldset>
             <form id="survey-form">
-                <label id="name-label">Full Name:</label>
-                <input id="name" type="text" placeholder="John Smith" required />
-                <label id="email-label">Email Address:</label>
-                <input id="email" type="email" placeholder="email@mail.com" required />
-                <label id="number-label">Number:</label>
-                <input id="number" type="number" placeholder="35" min="10" max="50" />
-                <label id="dropdown-label">Dropdown:</label>
-                <select id="dropdown" type="">
-                    <option id="dropdown" value="option 1">option 1</option>
-                    <option id="dropdown" value="option 2">option 2</option>
-                </select>
-                <label id="radio-label">Radio Button:</label>
-                <input id="radio" type="radio" value="male" name="radio-button" />
-                <input id="radio" type="radio" value="female" name="radio-button" />
-                <label for="background">Background</label>
-                <input type="checkbox" name="background" value="white">
-                <input type="checkbox" name="background" value="black">
-                <input type="checkbox" name="background" value="hispanic">
-                <input type="checkbox" name="background" value="other">
-                <label>Additional Comments:</label>
-                <textarea rows="4" cols="50">
-                </textarea>
-                <button id="submit" type="submit">Submit</button>
+                <div>
+                    <label id="name-label">Full Name:
+                        <input id="name" type="text" placeholder="John Smith" required />
+                    </label>
+                </div>
+                <div>
+                    <label id="email-label">Email Address:
+                        <input id="email" type="email" placeholder="email@mail.com" required />
+                    </label>
+                </div>
+                <div>
+                    <label id="number-label">Number:
+                        <input id="number" type="number" placeholder="35" min="10" max="50" />
+                    </label>
+                </div>
+                <div>
+                    <label id="dropdown-label">Dropdown:
+                        <select id="dropdown" type="">
+                            <option id="dropdown" value="option 1">option 1</option>
+                            <option id="dropdown" value="option 2">option 2</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label id="radio-label">Gender:
+                        <label> Male
+                            <input id="radio" type="radio" value="male" name="radio-button" />
+                        </label>
+                        <label> Female
+                            <input id="radio" type="radio" value="female" name="radio-button" />
+                        </label>
+                    </label>
+                </div>
+                <div>
+                    <label for="background">Background:
+                        <input type="checkbox" name="background" value="white">
+                        <input type="checkbox" name="background" value="black">
+                        <input type="checkbox" name="background" value="hispanic">
+                        <input type="checkbox" name="background" value="other">
+                    </label>
+                </div>
+                <div>
+                    <label>Additional Comments:
+                        <textarea rows="4" cols="50">
+                        </textarea>
+                    </label>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
             </form>
         </fieldset>
     </div>
