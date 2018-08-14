@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="survey-form.css">
+</head>
+
+<body>
+    <div class="headerWrapper">
+        <h1 id="title">The Best Survey Ever</h1>
+        <p id="description">This survey is designed to PUSH.YOUR.LIMITS.</p>
+    </div>
+    <div class="formWrapper">
+        <fieldset>
+            <form id="survey-form">
+                <div>
+                    <label id="name-label">Full Name:
+                        <input id="name" type="text" placeholder="John Smith" required />
+                    </label>
+                </div>
+                <div>
+                    <label id="email-label">Email Address:
+                        <input id="email" type="email" placeholder="email@mail.com" required />
+                    </label>
+                </div>
+                <div>
+                    <label id="number-label">Number:
+                        <input id="number" type="number" placeholder="35" min="10" max="50" />
+                    </label>
+                </div>
+                <div>
+                    <label id="dropdown-label">Dropdown:
+                        <select id="dropdown" type="">
+                            <option id="dropdown" value="option 1">option 1</option>
+                            <option id="dropdown" value="option 2">option 2</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label id="radio-label">Gender:
+                        <label> Male
+                            <input id="radio" type="radio" value="male" name="radio-button" />
+                        </label>
+                        <label> Female
+                            <input id="radio" type="radio" value="female" name="radio-button" />
+                        </label>
+                    </label>
+                </div>
+                <div>
+                    <label for="background">Background:
+                        <input type="checkbox" name="background" value="white">
+                        <input type="checkbox" name="background" value="black">
+                        <input type="checkbox" name="background" value="hispanic">
+                        <input type="checkbox" name="background" value="other">
+                    </label>
+                </div>
+                <div>
+                    <label>Additional Comments:
+                        <textarea rows="4" cols="50">
+                        </textarea>
+                    </label>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
