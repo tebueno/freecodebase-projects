@@ -1,0 +1,84 @@
+body {
+    background: #CADDEF;
+    margin: 0;
+}
+
+#email {
+    height: 25px;
+}
+a {
+    text-decoration: none;
+    display: block;
+    padding: 0 1em;
+    color: white;
+}
+
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flexStart {
+    justify-content: flex-start;
+}
+
+.flexEnd {
+    justify-content: flex-end;
+}
+
+.flexCenter {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.flexItem {
+    flex: 1;
+}
+
+#header-img {
+    width: 10vw;
+    height: 90px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navContainer {
+    background: #124B7E;
+    height: 90px;
+    width: 100%;
+}
+
+.navLogo {
+    width: 10vw;
+}
+
+.navForm {
+    width: 40vw;
+}
+@media only screen and (min-width: 1366px) {
+    .navigation {
+        width: 50vw;
+        font-family: klee;
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .navigation {
+        font-size: 18px;
+    }
+}
+
+.videoContainer {
+    height: calc(90vh - 90px);
+    width: 100vw;
+}
+
+#video {
+    width: calc(100% - 5vw);
+    height: calc(100% - 5vh);
+}
