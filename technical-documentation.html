@@ -1,0 +1,220 @@
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="technical-documentation.scss">
+</head>
+
+<body>
+        <div class="wrapper">
+                <header class="main-head">
+                        <h2>JavaScript Technical Documentation</h2>
+                </header>
+                <nav class="main-nav" id="navbar">
+                        <ul class="nav">
+                                <li>
+                                        <header>
+                                                <h3>JavaScript Features</h3>
+                                        </header>
+                                </li>
+                                <a class="nav-link" href="#Closures">
+                                        <li tabindex="1">Closures</li>
+                                </a>
+                                <a tabindex="2" class="nav-link" href="#Callbacks">
+                                        <li>Callbacks</li>
+                                </a>
+                                <a tabindex="3" class="nav-link" href="#Promises">
+                                        <li>Promises</li>
+                                </a>
+                                <a tabindex="4" class="nav-link" href="#Functional_Programming">
+                                        <li>Functional Programming</li>
+                                </a>
+                                <a tabindex="5" class="nav-link" href="#Block_Scope">
+                                        <li>Block Scope</li>
+                                </a>
+                        </ul>
+                </nav>
+                <main class="content" id="main-doc">
+                        <section id="Closures" class="main-section">
+                                <header>
+                                        <h2>Closures</h2>
+                                </header>
+                                <p>A closure is an inner function that has access to the outer (enclosing) function’s
+                                        variables—scope chain. The closure has three scope chains: it has access to its
+                                        own
+                                        scope (variables defined between its curly brackets), it has access to the
+                                        outer
+                                        function’s variables, and it has access to the global variables.</p>
+
+                                <p>The inner function has access not only to the outer function’s variables, but also
+                                        to the
+                                        outer function’s parameters. Note that the inner function cannot call the outer
+                                        function’s arguments object, however, even though it can call the outer
+                                        function’s
+                                        parameters directly.</p>
+
+                                <code>function showName (firstName, lastName) {
+                                        var nameIntro = "Your name is ";
+                                        // this inner function has access to the outer function's variables, including
+                                        the
+                                        parameter
+                                        function makeFullName () {
+                                        return nameIntro + firstName + " " + lastName;
+                                        }
+
+                                        return makeFullName ();
+                                        }
+
+                                        showName ("Michael", "Jackson"); // Your name is Michael Jackson</code>
+                        </section>
+                        <section id="Callbacks" class="main-section">
+                                <header>
+                                        <h2>Callbacks</h2>
+                                </header>
+                                <p>In JavaScript, functions are objects. Because of this, functions can take functions
+                                        as
+                                        arguments, and can be returned by other functions. Functions that do this are
+                                        called
+                                        higher-order functions. Any function that is passed as an argument is called a
+                                        callback
+                                        function.</p>
+                                <p>For one very important reason — JavaScript is an event driven language. This means
+                                        that
+                                        instead of waiting for a response before moving on, JavaScript will keep
+                                        executing
+                                        while listening for other events. Lets look at a basic example of a callback:</p>
+                                <code>function doHomework(subject, callback) {
+                                        alert(`Starting my ${subject} homework.`);
+                                        callback();
+                                        }
+
+                                        doHomework('math', function() {
+                                        alert('Finished my homework');
+                                        });</code>
+                        </section>
+                        <section id="Promises" class="main-section">
+                                <header>
+                                        <h2>Promises</h2>
+                                </header>
+                                <p>A promise can be in one of 3 states:</p>
+                                <ul>
+                                        <li>Pending - the promise’s outcome hasn’t yet been determined, because the
+                                                asynchronous operation that will produce its result hasn’t completed
+                                                yet.</li>
+                                        <li>Fulfilled - the asynchronous operation has completed, and the promise has a
+                                                value.</li>
+                                        <li>Rejected - the asynchronous operation failed, and the promise will never be
+                                                fulfilled. In the rejected state, a promise has a reason that indicates
+                                                why the
+                                                operation failed.</li>
+                                </ul>
+                                <p>When a promise is pending, it can transition to the fulfilled or rejected state.
+                                        Once a
+                                        promise is fulfilled or rejected, however, it will never transition to any
+                                        other state,
+                                        and its value or failure reason will not change.</p>
+                                <p>Promises have been implemented in many languages, and while promise APIs differ from
+                                        language to language, JavaScript promises have converged to the Promises/A+
+                                        proposed
+                                        standard. EcmaScript 6 is slated to provide promises as a first-class language
+                                        feature,
+                                        and they will be based on the Promises/A+ proposal.</p>
+                                <code>var greetingPromise = sayHello();
+                                        greetingPromise.then(function (greeting) {
+                                        console.log(greeting); // 'hello world’
+                                        }, function (error) {
+                                        console.error('uh oh: ', error); // 'uh oh: something bad happened’
+                                        });</code>
+                        </section>
+                        <section id="Functional_Programming" class="main-section">
+                                <header>
+                                        <h2>Functional Programming</h2>
+                                </header>
+                                <p>Functional programming (often abbreviated FP) is the process of building software by
+                                        composing pure functions, avoiding shared state, mutable data, and
+                                        side-effects.
+                                        Functional programming is declarative rather than imperative, and application
+                                        state
+                                        flows through pure functions. Contrast with object oriented programming, where
+                                        application state is usually shared and colocated with methods in objects.</p>
+                                <p>Functional programming is a programming paradigm, meaning that it is a way of
+                                        thinking about
+                                        software construction based on some fundamental, defining principles (listed
+                                        above).
+                                        Other examples of programming paradigms include object oriented programming and
+                                        procedural programming.</p>
+                                <code>// With shared state, the order in which function calls are made
+                                        // changes the result of the function calls.
+                                        const x = {
+                                        val: 2
+                                        };
+
+                                        const x1 = () => x.val += 1;
+
+                                        const x2 = () => x.val *= 2;
+
+                                        x1();
+                                        x2();
+
+                                        console.log(x.val); // 6
+
+                                        // This example is exactly equivalent to the above, except...
+                                        const y = {
+                                        val: 2
+                                        };
+
+                                        const y1 = () => y.val += 1;
+
+                                        const y2 = () => y.val *= 2;
+
+                                        // ...the order of the function calls is reversed...
+                                        y2();
+                                        y1();
+
+                                        // ... which changes the resulting value:
+                                        console.log(y.val); // 5</code>
+
+                                <h4>Other Programming paradigms:</h4>
+                                <ul>
+                                        <li>Procedural Programming</li>
+                                        <li>Object Oriented Programming</li>
+                                        <li>Meta Programming</li>
+                                        <li>Imperative Programming</li>
+                                        <li>Declarative Programming</li>
+                                </ul>
+                        </section>
+                        <section id="Block_Scope" class="main-section">
+                                <header>
+                                        <h2>
+                                                Block Scope
+                                        </h2>
+                                </header>
+                                <p>While there are many issues that trip up developers coming from other languages,
+                                        variable
+                                        scoping may be number one. The fundamental problem is that many expect
+                                        variables to be
+                                        scoped to a particular block (like a for loop), but in JavaScript variables
+                                        declared
+                                        with var are scoped to the nearest parent function.</p>
+                                <p>First let's take a look at how this can go wrong.</p>
+                                <code>var avatar = "Ang";
+                                        var element = "Air";
+
+                                        var elements = [
+                                        "Air",
+                                        "Earth",
+                                        "Fire",
+                                        "Water"
+                                        ];
+
+                                        for (var i = 0; i = elements.length; i++) { var element=elements[i];
+                                        console.log(avatar + " has mastered " + element); } // Outputs:
+                                        "Ang's primary element is Water" console.log(avatar + "'s primary element is "
+                                        + element);</code>
+                        </section>
+                </main>
+        </div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+</script>
+
+</html>
