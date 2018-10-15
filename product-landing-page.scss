@@ -82,3 +82,19 @@ a {
     width: calc(100% - 5vw);
     height: calc(100% - 5vh);
 }
+
+p, h2 {
+    text-align: center;
+}
+
+.iconContainer {
+    width: 15vw;
+    height: 15vh;
+    margin: auto;
+}
+
+.aboutMeContainer {
+    width: 60vw;
+    height: 30vh;
+    margin: auto;
+}
