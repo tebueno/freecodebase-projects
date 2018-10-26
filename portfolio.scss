@@ -1,0 +1,43 @@
+#welcome-section {
+    background-color: #9e6dcc;
+}
+
+#navbar {
+    position: fixed;
+    background: black;
+    height: 50px;
+    z-index: 10;
+    padding-top: calc(50px/4);
+}
+
+#navbar a {
+    text-decoration: none;
+}
+.full-vh {
+    height: 100vh;
+}
+
+.row-padding {
+    padding: 30px 0 30px 0;
+}
+
+.placeholder {
+    width: 300px;
+    height: 188px;
+    margin: auto;
+    background: lightgray;
+    padding-top: calc(188px / 4);
+    border: dotted 3px black;
+}
+
+@keyframes glide {
+   0% { right: 1000px; }
+   100% { right: 0px}
+
+}
+
+.animation {
+    position: relative;
+    animation-name: glide;
+    animation-duration: 2s;
+}
