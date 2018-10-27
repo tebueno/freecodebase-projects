@@ -1,6 +1,9 @@
 {
   "requires": true,
   "lockfileVersion": 1,
+    "scripts": {
+    "start": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1"
+  },
   "dependencies": {
     "async": {
       "integrity": "sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=",
