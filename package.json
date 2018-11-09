@@ -1,8 +1,10 @@
 {
   "requires": true,
   "lockfileVersion": 1,
-    "scripts": {
-    "start": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1"
+  "scripts": {
+    "start": "./node_modules/.bin/http-server -a localhost -p 8000 -c-1",
+    "dev": "webpack-dev-server --mode development --watch --open",
+    "prod": "webpack --mode production"
   },
   "dependencies": {
     "async": {
@@ -10,6 +12,7 @@
       "resolved": "https://registry.npmjs.org/async/-/async-1.5.2.tgz",
       "version": "1.5.2"
     },
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
     "colors": {
       "integrity": "sha1-BDP0TYCWgP3rYO0mDxsMJi6CpAs=",
@@ -145,6 +148,9 @@
       "resolved": "https://registry.npmjs.org/qs/-/qs-2.3.3.tgz",
       "version": "2.3.3"
     },
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "redux": "^4.0.1",
     "requires-port": {
       "integrity": "sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=",
       "resolved": "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz",
@@ -163,10 +169,17 @@
       "resolved": "https://registry.npmjs.org/url-join/-/url-join-2.0.5.tgz",
       "version": "2.0.5"
     },
+    "webpack": "^4.24.0",
     "wordwrap": {
       "integrity": "sha1-o9XabNXAvAAI03I0u68b7WMFkQc=",
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
       "version": "0.0.3"
     }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "webpack-cli": "^3.1.2"
   }
 }
