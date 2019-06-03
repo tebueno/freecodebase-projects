@@ -1,5 +1,4 @@
 import React from 'react';
-import './quoteGenApp.scss';
 class Button extends React.Component {
 
 

@@ -1,0 +1,5 @@
+@mixin color-transition($color: blue, $time: 1.5s, $type: ease) {
+    background-color: $color;
+    transition: background-color $time $type, color $time $type;;
+    color: $color;
+}

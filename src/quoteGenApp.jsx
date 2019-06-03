@@ -2,8 +2,7 @@ import React from 'react'
 import Button from './button.jsx';
 import axios from 'axios';
 import Twitter from './twitter.jsx';
-import FacebookIcon from './facebookIcon.jsx';
-import './quoteGenApp.scss';
+import './scss/main.scss';
 
 class QuoteGenApp extends React.Component {
     constructor(props) {
@@ -12,7 +11,7 @@ class QuoteGenApp extends React.Component {
             quote: '',
             author: '',
             btnValue: 'New Quote',
-            btnClass: 'btn',
+            btnClass: 'quote__button',
             btnId: 'new-quote',
             theme: '',
             themes: ['firebrick', 'green', 'blue', 'orange', 'sienna']            
@@ -25,7 +24,6 @@ class QuoteGenApp extends React.Component {
     }
 
     getQuote() {
-
         axios.get('https://talaikis.com/api/quotes/random/').then((response) => {
             this.setState( 
             {
@@ -51,21 +49,21 @@ class QuoteGenApp extends React.Component {
 
     render() {
         return (
-            <div className={`full-screen ${this.state.theme}`}>
-            <div id='quote-box' className='quote-body'>
-            <div className='quote-text'>
+            <div id='background' className={`quote--${this.state.theme}`}>
+            <div id='quote-box' className='quote'>
+            <div className='quote__body'>
                 <span id='text'>
                     {`"${this.state.quote}"`}
                 </span>
                 </div>
-                <div className='author-text'>
+                <div className='quote__author'>
                 <span id='author'>
                     {`- ${this.state.author}`}
                 </span>
                 </div>
-                <div className='bottom-text'>
+                <div className='quote__footer'>
                 <Twitter 
-                    class={this.state.theme}
+                    class={`quote--${this.state.theme}`}
                     quote={this.state.quote}
                     author={this.state.author}
                 />
@@ -73,7 +71,7 @@ class QuoteGenApp extends React.Component {
                 <Button 
                     id={this.state.btnId}
                     value={this.state.btnValue}
-                    class={`btn ${this.state.theme}`} 
+                    class={`quote--${this.state.theme} ${this.state.btnClass} `} 
                     clickFunct={this.getQuote}
                 />
                 </div>
