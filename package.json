@@ -108,7 +108,7 @@
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
       "version": "2.0.0"
     },
-    "npm": "^6.4.1",
+    "npm": "^6.14.6",
     "opener": {
       "integrity": "sha1-XG2ixdflgx6P+jlklQ+NZnSskLg=",
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.4.3.tgz",
